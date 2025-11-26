@@ -1,0 +1,502 @@
+import React, { useState, useMemo } from 'react';
+import { Search, Filter, ArrowUpDown, Sparkles, Scroll, Shield, Zap, Skull, Sun, Moon, Cloud, Activity, Flame, Droplets,
+Mountain, Wind, Crown } from 'lucide-react';
+
+const CardData = [
+// 1-10
+{ id: 1, name: "Adi Parashakti", power: 100, elements: ["🌌 Cosmic", "☀️ Light", "🌑 Shadow"], archetype: "🧬 Eternal
+Source / ✨ Reality Weaver", lore: "The origin and womb of all existence. Every god, realm, and soul emerges from her
+infinite consciousness. Beyond form, beyond duality — the ultimate absolute." },
+{ id: 2, name: "Param Brahman", power: 100, elements: ["🌌 Cosmic", "🧠 Mind", "🧬 Spirit"], archetype: "🧘 Formless
+Consciousness / 🔮 Transcendent Principle", lore: "The unmanifest reality underlying space, time, and consciousness. Not
+a being, but the state from which all beings arise." },
+{ id: 3, name: "Shiva (Mahadeva)", power: 99, elements: ["☠️ Death", "🌑 Shadow", "🎶 Vibration"], archetype: "🧘
+Ascetic Destroyer / ⚔️ Cosmic Warrior", lore: "The eternal yogi who dances the Tandava to dissolve worlds. Master of
+transformation and silence; the fire before rebirth." },
+{ id: 4, name: "Vishnu (Narayana)", power: 99, elements: ["💧 Water", "☀️ Light", "🌌 Cosmic"], archetype: "👑 Divine
+Preserver / 🧙 Mystic Strategist", lore: "The cosmic balance-keeper who manifests avatars when dharma collapses.
+Sustainer of universes sleeping upon Ananta Shesha." },
+{ id: 5, name: "Brahma", power: 95, elements: ["☀️ Light", "🌱 Earth", "🎶 Sound"], archetype: "✨ Creator Sage / 📜
+Knowledge Bearer", lore: "The divine architect who shaped the manifested cosmos. His thoughts become worlds, and his
+speech became the Vedas." },
+{ id: 6, name: "Mahakali", power: 99, elements: ["🌑 Shadow", "☠️ Death", "🕰️ Time"], archetype: "⚔️ War Goddess / 🔥
+Cosmic Destroyer", lore: "The embodiment of time, destruction, and pure unstoppable force. She devours ego, illusion,
+and universes with equal ease." },
+{ id: 7, name: "Tripurasundari", power: 98, elements: ["🌌 Cosmic", "💧 Water"], archetype: "✨ Divine Sorceress / 👑
+Celestial Queen", lore: "The beauty and intelligence of creation. Represents desire, manifestation, and the hidden
+geometry behind reality." },
+{ id: 8, name: "Durga", power: 96, elements: ["⚡ Lightning", "🔥 Fire"], archetype: "🦁 Warrior Goddess / 👑 Divine
+General", lore: "The invincible commander of celestial armies. Slayer of Mahishasura, protector of dharma, embodiment of
+controlled power." },
+{ id: 9, name: "Mahavishnu (Cosmic)", power: 100, elements: ["🌌 Cosmic", "🪐 Gravity", "☀️ Light"], archetype: "💠
+Universal Supreme / 🧬 Order Incarnate", lore: "The form in which infinite universes exist inside his being. Beyond
+avatars, beyond limitation." },
+{ id: 10, name: "Sadashiva", power: 100, elements: ["🕰️ Time", "🌌 Cosmic", "🧬 Spirit"], archetype: "🧘 Eternal
+Consciousness / ⚔️ Destroyer-Protector", lore: "The perfect union of stillness and power. Represents existence beyond
+the cycle of birth, life, and dissolution." },
+// 11-20
+{ id: 11, name: "Parvati", power: 90, elements: ["🌿 Nature", "🌱 Earth", "🧬 Spirit"], archetype: "🧘 Nurturing Mother
+/ 🦁 Hidden Warrior", lore: "The gentle counterpart to Shiva and embodiment of devotion and balance. When provoked, she
+manifests unstoppable divine forms like Durga and Kali." },
+{ id: 12, name: "Lakshmi", power: 89, elements: ["💧 Water", "☀️ Light"], archetype: "👑 Prosperity Empress / 🌸 Harmony
+Bringer", lore: "Goddess of wealth, prosperity, and auspicious fortune. Her presence brings abundance, balance, and
+grace to realms and hearts." },
+{ id: 13, name: "Saraswati", power: 88, elements: ["🎶 Sound", "🧠 Mind"], archetype: "✨ Scholar Mage / 🎼 Divine Bard",
+lore: "Embodiment of knowledge, language, and wisdom. From her flows music, art, poetry, learning, and the power of pure
+intellect." },
+{ id: 14, name: "Krishna", power: 95, elements: ["☀️ Light", "🌌 Cosmic"], archetype: "🧠 Psychic Strategist / 🎶 Divine
+Bard", lore: "Avatar of Vishnu, teacher of the Bhagavad Gita, master of strategy and compassion. Radiates joy, wisdom,
+and cosmic awareness beneath a playful form." },
+{ id: 15, name: "Rama", power: 92, elements: ["☀️ Light", "🌱 Earth"], archetype: "🛡 Holy Paladin / 🎯 Archer-King",
+lore: "The embodiment of virtue and dharma. A warrior king whose discipline, restraint, and righteousness became his
+greatest weapons." },
+{ id: 16, name: "Narasimha", power: 94, elements: ["⚡ Lightning", "☠️ Death"], archetype: "🦁 Berserker Judge / ⚔️
+Divine Enforcer", lore: "Fierce manifestation of Vishnu, appearing as half-lion, half-man to destroy tyranny. His roar
+ends injustice and dissolves fear itself." },
+{ id: 17, name: "Vamana", power: 93, elements: ["🪐 Gravity", "🌌 Cosmic"], archetype: "🧘 Reality Walker / ✨ Cosmic
+Monk", lore: "Appearing as a humble dwarf, yet expanding instantly into a cosmic giant to measure the universe with his
+steps. Embodies humility masking ultimate power." },
+{ id: 18, name: "Parashurama", power: 90, elements: ["🔥 Fire", "🪙 Metal"], archetype: "⚔️ Weapon Master / 🧘 Ascetic
+Warrior", lore: "The warrior-saint with unmatched mastery over warfare and discipline. Wielder of the divine axe and
+teacher to future legends." },
+{ id: 19, name: "Varaha", power: 92, elements: ["🌱 Earth", "🌋 Magma"], archetype: "🐗 Titan Defender / ⚔️
+World-Savior", lore: "The boar-form of Vishnu who lifted the Earth from cosmic chaos. His strength can shake worlds, yet
+his purpose is restoration." },
+{ id: 20, name: "Kurma", power: 91, elements: ["💧 Water", "🌱 Earth"], archetype: "🧘 Stabilizer / 🛡 Celestial
+Support", lore: "The cosmic tortoise form who balanced the ocean during its churning. Symbol of patience, endurance, and
+unshakeable foundation." },
+// 21-30
+{ id: 21, name: "Matsya", power: 91, elements: ["💧 Water"], archetype: "🐟 Primordial Guardian / 🧘 Dharma Keeper",
+lore: "The first avatar, appearing as a great divine fish to preserve sacred wisdom during the cosmic flood. Symbol of
+beginnings, survival, and continuity." },
+{ id: 22, name: "Kalki", power: 95, elements: ["⚡ Lightning", "🔥 Fire", "🪙 Metal"], archetype: "⚔️ Divine Slayer / 👑
+Final Redeemer", lore: "The prophesied final avatar who will descend riding a white horse, wielding a blazing sword to
+end the age of darkness and restore dharma across creation." },
+{ id: 23, name: "Hayagriva", power: 91, elements: ["🎶 Sound", "☀️ Light"], archetype: "✨ Knowledge Sorcerer / 🐴 Divine
+Hybrid", lore: "The radiant horse-headed deity of knowledge and memory. Guardian of sacred texts and embodiment of
+perfect clarity and intellect." },
+{ id: 24, name: "Dattatreya", power: 93, elements: ["🌌 Cosmic", "🧬 Spirit"], archetype: "🧘 Mystic Teacher / 🌿 Nature
+Ascetic", lore: "The union of Brahma, Vishnu, and Shiva in one being. A wandering sage of supreme realization,
+representing freedom from worldly boundaries." },
+{ id: 25, name: "Hanuman", power: 93, elements: ["🌬️ Wind", "🌪️ Storm", "🧬 Spirit"], archetype: "🧘 Divine Monk / 💪
+Titan-Slayer", lore: "Devotion incarnate, limitless strength, and agility. His loyalty, purity of heart, and mastery of
+breath grant him unmatched spiritual and physical power." },
+{ id: 26, name: "Ayyappa", power: 90, elements: ["🌿 Nature", "☠️ Shadow-Balance"], archetype: "🧘 Ascetic Warrior / ⚔️
+Demon Hunter", lore: "The harmonious son of Shiva and Vishnu’s avatar. A protector of boundaries, renunciation, and
+righteousness, balancing fierce discipline with peace." },
+{ id: 27, name: "Skanda (Kartikeya)", power: 91, elements: ["⚡ Lightning", "🔥 Fire"], archetype: "⚔️ Divine General /
+🦁 Warrior Youth", lore: "Commander of celestial armies and patron of strategists. Agile, sharp-minded, and fearless — a
+hero born for combat and leadership." },
+{ id: 28, name: "Ganesha", power: 92, elements: ["🧠 Mind", "🪙 Metal", "🎶 Sound"], archetype: "✨ Obstacle-Remover / 🧘
+Wisdom Guardian", lore: "Lord of beginnings, intellect, and pathways. Benevolent and playful, yet infinitely wise — the
+divine key to progress and clarity." },
+{ id: 29, name: "Indra", power: 85, elements: ["⚡ Lightning", "🌪️ Storm"], archetype: "👑 Sky King / 🎯 Divine Archer",
+lore: "Ruler of the heavens and wielder of the thunderbolt. Fierce, proud, and complex — both a protector of gods and a
+symbol of the struggle against ego." },
+{ id: 30, name: "Agni", power: 82, elements: ["🔥 Fire", "🌋 Magma"], archetype: "🔥 Flame Deity / 🧙 Elemental Priest",
+lore: "The living fire — carrier of offerings, purifier of realms, spark of life and destruction. Source of energy,
+passion, and sacred transformation." },
+// 31-40
+{ id: 31, name: "Varuna", power: 83, elements: ["💧 Water"], archetype: "👑 Ocean King / 🧙 Law Mage", lore: "Guardian
+of cosmic order and ruler of the oceans. His authority governs truth, oaths, and the unseen laws woven into reality
+itself." },
+{ id: 32, name: "Surya", power: 86, elements: ["☀️ Light", "🔥 Fire"], archetype: "🌞 Solar Guardian / 👑 Celestial
+Charioteer", lore: "The radiant sun-god whose light nourishes life and banishes darkness. His seven horses represent the
+spectrum of creation and consciousness." },
+{ id: 33, name: "Chandra", power: 82, elements: ["❄️ Frost", "🧊 Crystal", "🌑 Shadow"], archetype: "🌙 Lunar Mystic / ✨
+Dream Mage", lore: "The moon-deity who stirs tides, emotions, intuition, and inner rhythms. Associated with soft power,
+subtle magic, and timeless beauty." },
+{ id: 34, name: "Vayu", power: 87, elements: ["🌬️ Air"], archetype: "🌪️ Wind Master / 💨 Swift Warrior", lore: "The
+breath of life and force of storms. Father of Hanuman, bearer of movement, agility, and the invisible strength holding
+worlds together." },
+{ id: 35, name: "Kubera", power: 80, elements: ["🪙 Metal", "☀️ Gold Energy"], archetype: "👑 Wealth Keeper / 💼 Vault
+Guardian", lore: "Protector of prosperity and hidden treasures. Though stern and duty-bound, his presence brings
+stability, abundance, and security." },
+{ id: 36, name: "Yama", power: 84, elements: ["☠️ Death", "🌑 Shadow"], archetype: "⚖️ Judge of Souls / 👹 Underworld
+Warden", lore: "Keeper of the realm beyond death. Fair, impartial, and unyielding — guiding souls based on truth rather
+than fear or favor." },
+{ id: 37, name: "Shani", power: 86, elements: ["🪐 Gravity", "🌑 Shadow"], archetype: "🧿 Fate Binder / 🕰 Karma
+Enforcer", lore: "The slow-moving force of destiny, discipline, and unavoidable consequence. His trials forge wisdom,
+strength, and evolution." },
+{ id: 38, name: "Usha", power: 72, elements: ["☀️ Light"], archetype: "🌄 Dawn Maiden / 🎼 Radiant Voice", lore: "The
+personification of the rising dawn. Gentle yet transformative, she symbolizes new beginnings, awakening, and hope
+reborn." },
+{ id: 39, name: "Pushan", power: 71, elements: ["🌱 Earth"], archetype: "🚶 Path Guide / 🐑 Pastoral Guardian", lore:
+"Protector of travelers, flocks, and nourishment. A benevolent shepherd of growth, safety, and natural rhythms." },
+{ id: 40, name: "The Maruts", power: 79, elements: ["🌪️ Storm", "⚡ Lightning"], archetype: "⚔️ Storm Warriors / 🪶 Sky
+Fighters", lore: "Fierce wind-gods with roaring energy. Their thunderous presence inspires courage and fear,
+representing wild, untamed forces of nature." },
+// 41-50
+{ id: 41, name: "Ravana", power: 88, elements: ["🎶 Sound", "🧠 Mind", "🌑 Shadow"], archetype: "✨ Sorcerer King / ⚔️
+Warrior Scholar", lore: "A brilliant ruler, scholar of the Vedas, and master of astral arts. His strength and intellect
+were unmatched—yet downfall came through ego and imbalance." },
+{ id: 42, name: "Hiranyakashipu", power: 88, elements: ["🌑 Shadow", "🪐 Gravity"], archetype: "🧙 Dark Mystic / 👑
+Tyrant King", lore: "A ruler who feared no god and sought immortality through cunning and austerity. His defiance shaped
+one of the greatest divine interventions in myth." },
+{ id: 43, name: "Mahishasura", power: 84, elements: ["🧪 Poison", "🌿 Nature"], archetype: "🐂 Beast Titan / ⚔️ Chaotic
+Warlord", lore: "A shape-shifting warlord empowered by overwhelming resilience. His rise shook the heavens until Durga
+herself descended to defeat him." },
+{ id: 44, name: "Shumbha", power: 82, elements: ["⚡ Lightning", "🔥 Fire"], archetype: "👑 Warlord Emperor / 🧲
+Power-Stealer", lore: "A demon ruler driven by conquest and domination. Fierce, strategic, and relentless—yet ultimately
+humbled by the divine feminine." },
+{ id: 45, name: "Nishumbha", power: 82, elements: ["🌑 Shadow", "🧪 Corruption"], archetype: "✨ Dark Enchanter / ⚔️
+Blood Knight", lore: "The cold and cunning brother of Shumbha who sought to control both realms and souls. His power
+flowed not only from strength but from manipulation." },
+{ id: 46, name: "Tripurasura", power: 86, elements: ["🪙 Metal", "⚡ Lightning"], archetype: "🧲 Fortress Engineer / ⚔️
+Siege Master", lore: "Builder of three celestial cities fortified beyond divine assault. His reign challenged the gods
+themselves, ending only with Shiva’s celestial arrow." },
+{ id: 47, name: "Narakasura", power: 78, elements: ["🔥 Fire", "🌑 Shadow"], archetype: "💀 Demon Commander / ⚔️ Chaos
+Warrior", lore: "A fierce and ambitious ruler whose power grew unchecked until righteousness intervened. His defeat is
+celebrated as the triumph of truth over tyranny." },
+{ id: 48, name: "Vritra", power: 85, elements: ["💧 Water", "🌪️ Storm"], archetype: "🐉 Leviathan Titan / ⚔️ Anti-Deva
+Destroyer", lore: "The primeval serpent whose body blocked rivers and rainfall. A symbol of stagnation conquered by
+Indra's thunderbolt." },
+{ id: 49, name: "Banasura", power: 76, elements: ["🪙 Metal", "⚔️ War"], archetype: "🛡 Shield-Lord / 👑 Ancient Titan",
+lore: "A warrior blessed with extraordinary defenses and endless ambition. His devotion and pride drew the attention and
+judgment of Krishna." },
+{ id: 50, name: "Kumbhakarna", power: 67, elements: ["🌱 Earth", "🪐 Gravity"], archetype: "🛡 Mountain Titan / 💪
+Indestructible Warrior", lore: "Brother to Ravana with monumental strength matched only by eternal sleep. A tragic
+figure—loyal and powerful, yet bound to destiny." },
+// 51-60
+{ id: 51, name: "Jalandhara", power: 78, elements: ["🌊 Water", "🌑 Shadow"], archetype: "👑 Ocean Conqueror / ✨
+Illusion Mage", lore: "Born from Shiva’s energy and oceanic force, his power rivaled the gods. His strength grew through
+devotion yet collapsed under ego and deception." },
+{ id: 52, name: "Andhaka", power: 74, elements: ["🌑 Shadow", "☠️ Death"], archetype: "⚔️ Blind Berserker / 🧬 Cursed
+Demi-God", lore: "Born without sight yet overflowing with raw destructive potential. His hunger for Parvati’s grace
+triggered a divine confrontation with Shiva himself." },
+{ id: 53, name: "Vichitravirya", power: 60, elements: ["🧪 Weakening Essence"], archetype: "👑 Fallen Royal / ⚔️ Tragic
+Heir", lore: "A reminder that power is not only strength. A king burdened by frailty and fate, whose legacy shaped
+future kingdoms despite personal weakness." },
+{ id: 54, name: "Narada", power: 78, elements: ["🎶 Sound", "🌌 Cosmic"], archetype: "🪽 Divine Messenger / 🧘 Celestial
+Bard", lore: "Sage, traveler, provocateur, and catalyst of destiny. His words carry wisdom—or chaos—depending on who
+listens. A force of learning through experience." },
+{ id: 55, name: "Vashistha", power: 79, elements: ["☀️ Light", "🧠 Mind"], archetype: "🧘 Supreme Sage / ✨ Reality
+Weaver", lore: "One of the most revered rishis. His mastery of cosmic law and restraint places him beyond mere might—his
+wisdom shapes destiny itself." },
+{ id: 56, name: "Vishwamitra", power: 78, elements: ["🎶 Sound", "🧠 Mind"], archetype: "✨ Astral Wizard / 🧬 Mantra
+Architect", lore: "Once a king, later a sage, rising through supreme discipline. The creator of the Gayatri mantra and
+proof that willpower can reshape reality." },
+{ id: 57, name: "Durvasa", power: 79, elements: ["☠️ Death", "🌑 Shadow"], archetype: "🔮 Cursed Sage / ⚔️ Karma
+Enforcer", lore: "Powerful ascetic known for unpredictable temper. His presence teaches discipline, humility, and the
+cost of disrespect." },
+{ id: 58, name: "Agastya", power: 78, elements: ["🌱 Earth", "🧬 Spirit"], archetype: "🧘 Southern Sage / ✨ Sonic
+Adept", lore: "A revered wanderer whose wisdom shaped societies. Known for drinking an entire ocean to calm celestial
+chaos—mastery beyond imagination." },
+{ id: 59, name: "Bhrigu", power: 79, elements: ["🧬 Spirit", "🕰️ Time"], archetype: "✨ Karma Seer / 🔮 Destiny
+Scholar", lore: "The ancient sage who recorded cosmic destiny. His sight pierces illusion, revealing hidden outcomes and
+eternal patterns." },
+{ id: 60, name: "Atri", power: 77, elements: ["☀️ Light"], archetype: "🧘 Radiant Mystic / 🌿 Nature Saint", lore: "One
+of the Saptarishis, carrying purity, truth, and luminous consciousness. His prayers shaped divine lineage and spiritual
+evolution." },
+// 61-70
+{ id: 61, name: "Markandeya", power: 76, elements: ["🕰️ Time", "🌌 Cosmic"], archetype: "🧘 Immortal Witness / ✨
+Chronicle Sage", lore: "A devotee rescued from death by Shiva himself. He witnessed cosmic dissolution and rebirth,
+carrying rare knowledge beyond eras." },
+{ id: 62, name: "Patanjali", power: 76, elements: ["🧠 Mind", "🧬 Spirit"], archetype: "🧘 Yogic Architect / 🎓 Teacher
+of Stillness", lore: "Codifier of yoga, master of breath and consciousness. His teachings unlock pathways to inner
+ascension and mastery of the self." },
+{ id: 63, name: "Kashyapa", power: 75, elements: ["🌿 Nature", "🌱 Earth"], archetype: "🧘 Ancestral Sage / ✨
+Life-Origin Teacher", lore: "A progenitor of races, species, and dynasties. His legacy shapes cosmology, ecology, and
+the continuity of creation." },
+{ id: 64, name: "Lomasha", power: 58, elements: ["🌿 Nature"], archetype: "🧘 Forest Ascetic / 🔮 Divine Wanderer",
+lore: "A sage connected deeply to time cycles and nature's rhythms. His presence is rare and often tied to destiny
+paths." },
+{ id: 65, name: "Valmiki", power: 70, elements: ["🎶 Sound"], archetype: "🖋 Poet-Seer / ✨ Story Oracle", lore: "Once a
+bandit, transformed through mantra and realization. His epic poetry gave immortal voice to the journey of Rama." },
+{ id: 66, name: "Arjuna", power: 70, elements: ["⚡ Lightning", "🎯 Precision"], archetype: "🎯 Master Archer / 🧠
+Tactical Hero", lore: "Trained by gods and sages, guided by Krishna. His discipline and clarity elevate him to a
+legendary warrior of destiny." },
+{ id: 67, name: "Karna", power: 69, elements: ["☀️ Light", "🔥 Fire"], archetype: "⚔️ Cursed Champion / 🪙 Armored
+Duelist", lore: "A fearless and gifted warrior marked by fate’s irony. His loyalty, determination, and honor made him
+unforgettable." },
+{ id: 68, name: "Bhima", power: 66, elements: ["🌱 Earth"], archetype: "💪 Strength Warrior / ⚔️ Titan Slayer", lore: "A
+hero born with immense might and appetite equal to his spirit. Fierce protector, relentless in battle, unstoppable once
+invoked." },
+{ id: 69, name: "Bhishma", power: 68, elements: ["🧬 Spirit", "🪙 Steel"], archetype: "🛡 Eternal Guardian / ⚔️
+Duty-Bound Knight", lore: "The embodiment of loyalty and sacrifice. Granted the boon of choosing his moment of death — a
+warrior beyond mortality." },
+{ id: 70, name: "Drona", power: 64, elements: ["🧠 Mind", "🪙 Weaponry"], archetype: "🧙 Battle Sage / ⚔️ Master
+Tactician", lore: "Mentor to heroes and kings. A genius of warfare, discipline, and ancient strategy—his teachings
+shaped the future of conflict." },
+// 71-80
+{ id: 71, name: "Ashwatthama", power: 72, elements: ["☠️ Death", "🌑 Shadow"], archetype: "⚔️ Cursed Warrior / 🕰
+Eternal Walker", lore: "Born with divine blessings and immense power. After the war, burdened with immortality and
+consequences, he walks forever carrying the weight of karma." },
+{ id: 72, name: "Abhimanyu", power: 63, elements: ["⚡ Lightning", "🎯 Precision"], archetype: "⚔️ Formation Breaker / 🦁
+Courageous Youth", lore: "Young hero of the Mahabharata whose bravery and skill remain unmatched. His sacrifice became a
+symbol of valor beyond experience." },
+{ id: 73, name: "Lakshmana", power: 61, elements: ["🔥 Fire"], archetype: "⚔️ Royal Guardian / 🧬 Loyal Brother", lore:
+"Fiercely devoted to Rama, unwavering in duty and discipline. His sharp combat ability and dedication define righteous
+service." },
+{ id: 74, name: "Ghatotkacha", power: 66, elements: ["🌪️ Storm", "🌑 Shadow"], archetype: "✨ Battle Sorcerer / 💪
+Titan-Forged Warrior", lore: "Son of Bhima with half-human, half-rakshasa origin. His presence on the battlefield was
+chaos incarnate—fearless and unpredictable." },
+{ id: 75, name: "Sugriva", power: 60, elements: ["🌱 Earth"], archetype: "🦍 Beast-King / ⚔️ Forest Warrior", lore:
+"Bearer of primal strength and leader of Vanaras. His alliance shaped Rama’s journey and the eventual fall of Ravana."
+},
+{ id: 76, name: "Angada", power: 62, elements: ["🌬️ Wind"], archetype: "🦁 Royal Combatant / 💨 Agile Warrior", lore:
+"A fearless commander gifted with striking speed and unmatched endurance. His diplomacy and courage made him a vital
+force in war." },
+{ id: 77, name: "Jatayu", power: 64, elements: ["🌬️ Wind"], archetype: "🪽 Divine Bird Warrior / ⚔️ Martyr Guardian",
+lore: "A noble protector who fought Ravana in the sky to defend Sita. His sacrifice embodies honor, loyalty, and final
+courage." },
+{ id: 78, name: "Vibhishana", power: 61, elements: ["☀️ Light"], archetype: "🧘 Just Ruler / ✨ Disciplined Mystic",
+lore: "A rakshasa who chose dharma over blood allegiance. His wisdom restored balance and justice in Lanka after
+Ravana’s fall." },
+{ id: 79, name: "Tara (Ramayana)", power: 55, elements: ["🧠 Mind"], archetype: "👑 Strategic Queen / 🎓 Wise
+Counselor", lore: "Known for calm intelligence and diplomacy. Her guidance shaped alliances, battles, and outcomes in
+subtle yet profound ways." },
+{ id: 80, name: "Mandodari", power: 58, elements: ["🌿 Nature"], archetype: "👑 Noble Consort / 🧘 Hidden Mystic", lore:
+"Queen of Lanka, respected for purity, wisdom, and compassion. A symbol of dignity amidst chaos, tragedy, and conflict."
+},
+// 81-90
+{ id: 81, name: "Vasuki", power: 60, elements: ["🧪 Poison", "🪐 Binding Force"], archetype: "🐍 Serpent King / 🛡 Ocean
+Stabilizer", lore: "The sacred naga ruler used as the churning rope during Samudra Manthan. Symbol of restraint, power,
+and ancient serpentine wisdom." },
+{ id: 82, name: "Takshaka", power: 59, elements: ["🧪 Poison", "🌿 Nature"], archetype: "🐍 Assassin Lord / 💀 Venom
+Sorcerer", lore: "A feared naga with lethal precision. His presence inspires caution, reminding rulers and seekers of
+hidden danger within the natural world." },
+{ id: 83, name: "Shesha (Ananta)", power: 75, elements: ["🌌 Cosmic", "🪐 Gravity"], archetype: "🧬 Eternal Serpent / 🌌
+Universe Supporter", lore: "The thousand-headed serpent on whom Vishnu rests. Holds existence steady and remains beyond
+fear, change, or time." },
+{ id: 84, name: "Manasa", power: 70, elements: ["🌿 Nature", "🧪 Poison"], archetype: "✨ Snake Goddess / 🌿
+Healer-Sorceress", lore: "A goddess of fertility, healing, and protection from venom. Dual-natured—capable of both
+nourishment and retribution." },
+{ id: 85, name: "Urvashi", power: 52, elements: ["❄️ Frost", "🎶 Sound"], archetype: "💃 Celestial Dancer / ✨ Enchanting
+Muse", lore: "A divine apsara whose grace captivates gods and mortals alike. Her beauty and presence shape stories,
+destinies, and emotions." },
+{ id: 86, name: "Rambha", power: 50, elements: ["🎶 Sound"], archetype: "💃 Enchantress / 💫 Spirit Performer", lore: "A
+celestial artist whose movement and voice manifest emotion. Her presence bridges joy, illusion, and transcendent
+beauty." },
+{ id: 87, name: "Menaka", power: 50, elements: ["🎶 Sound"], archetype: "💃 Dream Weaver / ✨ Illusion Performer", lore:
+"Sent to break Vishwamitra’s penance, yet bound by her own humanity and compassion. A reminder of how powerful beauty
+and emotion can be." },
+{ id: 88, name: "Chitraratha", power: 54, elements: ["🎶 Sound"], archetype: "🎼 Gandharva Commander / 🧬 Harmony
+Keeper", lore: "A celestial ruler among musicians and spirits. His mastery of art extends beyond aesthetics to influence
+balance and unseen forces." },
+{ id: 89, name: "Pushpadanta", power: 58, elements: ["🌿 Nature", "🎶 Sound"], archetype: "✨ Flower-Mage / 🙏 Divine
+Servant", lore: "A celestial being tied to devotion, beauty, and humility. His stories preserve the lessons of reverence
+and cosmic etiquette." },
+{ id: 90, name: "Alakshmi", power: 65, elements: ["🌑 Shadow", "🧪 Misfortune"], archetype: "👿 Discord Spirit / 💀
+Curse Bearer", lore: "Shadow counterpart to Lakshmi. Wherever harmony weakens, she arrives—teaching that imbalance and
+greed draw disorder." },
+// 91-100
+{ id: 91, name: "Mariamman", power: 72, elements: ["🌋 Magma", "🌿 Nature"], archetype: "⚔️ Plague-Slayer / ✨ Healing
+Mother", lore: "A fierce yet compassionate goddess associated with rain, fire, and protection from disease. A guardian
+of villages and a purifier of both body and spirit." },
+{ id: 92, name: "Muthappan", power: 70, elements: ["🌿 Forest", "🌬️ Wind"], archetype: "🎭 Hunter Deity / 🧘
+Dual-Nature Guardian", lore: "A protector spirit embodying generosity, freedom, and wild nature. Worshiped through folk
+ritual and sincerity rather than rigidity." },
+{ id: 93, name: "Ayyanar", power: 68, elements: ["🌱 Earth", "🐎 Guardian Energy"], archetype: "👑 Village Protector /
+⚔️ Night Rider", lore: "A boundary guardian of rural lands, depicted riding through the night. Defender of the innocent
+and watcher of sacred space." },
+{ id: 94, name: "Kuttichathan", power: 57, elements: ["🌑 Shadow", "🔥 Fire"], archetype: "😈 Trickster Spirit / ✨ Spell
+Thief", lore: "Playful, mischievous, and unpredictable — yet protective when respected. His presence teaches caution,
+wit, and humility." },
+{ id: 95, name: "Karuppasamy", power: 73, elements: ["🪙 Iron", "☠️ Justice"], archetype: "👑 Law Enforcer / ⚔️ Fierce
+Guardian", lore: "A deity of oaths and righteousness known for decisive action and strict justice. Protects the
+vulnerable and punishes the corrupt." },
+{ id: 96, name: "Vetala", power: 62, elements: ["☠️ Death", "🌑 Shadow"], archetype: "👻 Spirit Rogue / 🔮 Possessor",
+lore: "A wandering spirit of graveyards and crossroads, wise in occult truths. Can guide or torment depending on intent,
+respect, or insult." },
+{ id: 97, name: "Bhairavi Yakshini", power: 66, elements: ["🌑 Shadow", "🎶 Chant"], archetype: "✨ Tantric Guardian / 🩸
+Shadow Priestess", lore: "A mysterious being tied to sacred rituals and secret wisdom. Both feared and revered, she
+grants occult blessings to the disciplined and bold." },
+{ id: 98, name: "Jwala Devi", power: 80, elements: ["🔥 Fire"], archetype: "🔥 Flame Goddess / 🛡 Temple Protector",
+lore: "Manifested as eternal fire, worshipped where flames burn without fuel. A living symbol of purity, power, and
+undefeatable divine presence." },
+{ id: 99, name: "Khandoba", power: 74, elements: ["🌿 Nature", "⚔️ Warrior Force"], archetype: "👑 Hunter King / ⚔️
+Battle Champion", lore: "Protector of the land, warriors, and farmers. Known for unwavering courage, righteous fury, and
+guidance to those who defend the earth." },
+{ id: 100, name: "Baba Budan", power: 55, elements: ["🌿 Forest", "🌬️ Wind"], archetype: "🧘 Sufi-Yogi / ✨ Mystic
+Saint", lore: "A bridge between faiths and cultures. A wandering enlightened soul known for balance, compassion, and
+quiet spiritual wisdom." }
+];
+
+export default function App() {
+const [searchTerm, setSearchTerm] = useState("");
+const [selectedElement, setSelectedElement] = useState("All");
+const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
+
+// Extract unique elements for the filter dropdown
+const allElements = useMemo(() => {
+const elements = new Set();
+CardData.forEach(card => {
+card.elements.forEach(el => elements.add(el.split(' ')[1] || el)); // Try to grab just text if emoji present
+});
+return ["All", ...Array.from(elements).sort()];
+}, []);
+
+const sortedData = useMemo(() => {
+let sortableItems = [...CardData];
+if (sortConfig.key !== null) {
+sortableItems.sort((a, b) => {
+if (a[sortConfig.key] < b[sortConfig.key]) { return sortConfig.direction==='asc' ? -1 : 1; } if (a[sortConfig.key]>
+    b[sortConfig.key]) {
+    return sortConfig.direction === 'asc' ? 1 : -1;
+    }
+    return 0;
+    });
+    }
+    return sortableItems;
+    }, [sortConfig]);
+
+    const filteredData = useMemo(() => {
+    return sortedData.filter(card => {
+    const matchesSearch = card.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    card.archetype.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesElement = selectedElement === "All" || card.elements.some(el => el.includes(selectedElement));
+    return matchesSearch && matchesElement;
+    });
+    }, [searchTerm, selectedElement, sortedData]);
+
+    const requestSort = (key) => {
+    let direction = 'asc';
+    if (sortConfig.key === key && sortConfig.direction === 'asc') {
+    direction = 'desc';
+    }
+    setSortConfig({ key, direction });
+    };
+
+    const getPowerColor = (power) => {
+    if (power === 100) return "text-purple-400 drop-shadow-[0_0_8px_rgba(192,132,252,0.8)]";
+    if (power >= 95) return "text-amber-400 drop-shadow-[0_0_5px_rgba(251,191,36,0.6)]";
+    if (power >= 90) return "text-emerald-400";
+    return "text-blue-400";
+    };
+
+    const getBorderColor = (power) => {
+    if (power === 100) return "border-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.15)]";
+    if (power >= 95) return "border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.1)]";
+    return "border-slate-700 hover:border-slate-500";
+    };
+
+    return (
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500/30">
+        {/* Header */}
+        <div className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center space-x-3">
+                        <div className="p-2 bg-amber-500/10 rounded-lg border border-amber-500/20">
+                            <Sparkles className="h-6 w-6 text-amber-500" />
+                        </div>
+                        <div>
+                            <h1
+                                className="text-xl font-bold bg-gradient-to-r from-amber-200 to-amber-500 bg-clip-text text-transparent">
+                                Divine Archive
+                            </h1>
+                            <p className="text-xs text-slate-400 uppercase tracking-widest">Celestial Database •
+                                {CardData.length} Entities</p>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                        {/* Search */}
+                        <div className="relative flex-grow md:flex-grow-0">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-500" />
+                            <input type="text" placeholder="Search deities..."
+                                className="w-full md:w-64 bg-slate-900 border border-slate-700 rounded-full py-2 pl-9 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500/50 transition-all placeholder:text-slate-600"
+                                value={searchTerm} onChange={(e)=> setSearchTerm(e.target.value)}
+                            />
+                        </div>
+
+                        {/* Filter */}
+                        <div className="relative">
+                            <select
+                                className="appearance-none bg-slate-900 border border-slate-700 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer"
+                                value={selectedElement} onChange={(e)=> setSelectedElement(e.target.value)}
+                                >
+                                {allElements.map(el => (
+                                <option key={el} value={el}>{el}</option>
+                                ))}
+                            </select>
+                            <Filter
+                                className="absolute right-3 top-1/2 -translate-y-1/2 h-3 w-3 text-slate-500 pointer-events-none" />
+                        </div>
+
+                        {/* Sort */}
+                        <button onClick={()=> requestSort('power')}
+                            className={`flex items-center space-x-1 px-4 py-2 rounded-full border text-sm transition-all
+                            ${
+                            sortConfig.key === 'power'
+                            ? 'bg-amber-500/10 border-amber-500/50 text-amber-400'
+                            : 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800'
+                            }`}
+                            >
+                            <Activity className="h-3 w-3" />
+                            <span>Power</span>
+                            {sortConfig.key === 'power' && (
+                            <ArrowUpDown className="h-3 w-3 ml-1" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Grid */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            {filteredData.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-20 text-slate-500">
+                <Scroll className="h-16 w-16 mb-4 opacity-20" />
+                <p className="text-lg">No divine entities found in this realm.</p>
+            </div>
+            ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredData.map((card) => (
+                <div key={card.id} className={`group relative bg-slate-900/50 backdrop-blur-sm rounded-xl border p-6
+                    transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${getBorderColor(card.power)}`}>
+                    {/* Header Section */}
+                    <div className="flex justify-between items-start mb-4">
+                        <div>
+                            <h2
+                                className="text-lg font-bold text-slate-100 group-hover:text-amber-200 transition-colors">
+                                {card.name}
+                            </h2>
+                            <div className="flex flex-wrap gap-2 mt-2">
+                                {card.elements.map((el, idx) => (
+                                <span key={idx}
+                                    className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-800 border border-slate-700 text-slate-300">
+                                    {el}
+                                </span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-end">
+                            <span className={`text-2xl font-black font-mono ${getPowerColor(card.power)}`}>
+                                {card.power}
+                            </span>
+                            <span className="text-[10px] uppercase tracking-wider text-slate-500">Power Level</span>
+                        </div>
+                    </div>
+
+                    {/* Archetype Badge */}
+                    <div className="mb-4">
+                        <div className="inline-block px-3 py-1 rounded-md bg-slate-800/80 border border-slate-700/50">
+                            <p className="text-xs text-amber-500/90 font-medium tracking-wide">
+                                {card.archetype}
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Lore Section */}
+                    <div className="relative">
+                        <div className="absolute top-0 left-0 w-1 h-full bg-slate-800 rounded-full"></div>
+                        <p className="pl-4 text-sm text-slate-400 leading-relaxed italic">
+                            "{card.lore}"
+                        </p>
+                    </div>
+
+                    {/* Decorative Corner */}
+                    <div className="absolute bottom-2 right-2 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <Crown className="h-12 w-12 text-white" />
+                    </div>
+                </div>
+                ))}
+            </div>
+            )}
+        </main>
+    </div>
+    );
+    }

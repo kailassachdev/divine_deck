@@ -1,0 +1,448 @@
+👑 Dasharatha — Power: 65
+Element: ☀️ Light, 🛡 Royal Authority
+Archetype: 👑 Dharma King / 🛡 Protector of Lineage
+Lore: The righteous ruler of Ayodhya and father of Rama, Lakshmana, Bharata, and Shatrughna. Known for discipline and fairness, yet bound by destiny through a tragic vow that shaped the epic.
+
+🛡 Bharata — Power: 52
+Element: ☀️ Light, 🌱 Earth
+Archetype: 🧘 Devoted Brother / 👑 Reluctant Regent
+Lore: A symbol of unconditional loyalty, refusing to take Rama’s place even when offered the throne. Ruled as a caretaker, not a king, in honor of his brother.
+
+🔥 Shatrughna — Power: 56
+Element: 🔥 Fire
+Archetype: ⚔️ Silent Warrior / 🧬 Duty-Bound Supporter
+Lore: Often quiet and overlooked, yet deadly skilled and fiercely loyal. His battles—including the defeat of Lavanasura—prove his hidden strength.
+
+💧 Kaushalya — Power: 40
+Element: 💧 Water, ☀️ Grace
+Archetype: 👑 Noble Queen / 💞 Compassionate Mother
+Lore: Mother of Rama and beacon of love, wisdom, and emotional strength. Represents patience and purity through longing and resilience.
+
+🌑 Kaikeyi — Power: 47
+Element: 🌑 Shadow, 🧠 Strategy
+Archetype: 👑 Royal Diplomat / ⚖️ Catalyst of Fate
+Lore: Intelligent, strategic, and deeply complex. Her decision — influenced by fear and manipulation — sets the path for exile, war, and restoration.
+
+🌿 Sumitra — Power: 44
+Element: 🌿 Nature, ☀️ Balance
+Archetype: 🧘 Wise Matriarch / 🌸 Supportive Guide
+Lore: Mother of Lakshmana and Shatrughna. Calm, grounded, and discerning — the quiet voice of spiritual clarity in Ayodhya.
+
+🏹 Nishada King Guha — Power: 55
+Element: 🌱 Earth, 🌬️ Wind
+Archetype: 🤝 Loyal Ally / 🗡 Forest Guardian
+Lore: Fiercely loyal to Rama, offering refuge during exile. His presence bridges royal order with wilderness wisdom.
+
+🐻 Jambavan — Power: 78
+Element: 🌱 Earth, 🧬 Ancient Spirit
+Archetype: 🦁 Elder Warrior / 🧘 Timeless Sage
+Lore: An ancient being present since creation. Wise strategist and mentor figure whose insight guides battles and destiny.
+
+🪨 Nala (Bridge Engineer) — Power: 59
+Element: 🪙 Stonecraft, ⚙️ Engineering
+Archetype: 🛠 Divine Architect / 🌉 Bridge Maker
+Lore: Blessed with engineering mastery, he designed and executed the bridge to Lanka. Represents skill, ingenuity, and divine craftsmanship.
+
+🌀 Nila (Vanara Commander) — Power: 62
+Element: 🔥 Fire, ⚔️ Force
+Archetype: ⚔️ Battlefield General / 💥 Shock Fighter
+Lore: A fierce warrior among the Vanaras with command presence and unwavering courage. Known for frontline leadership and tactical aggression.
+
+🦁 Vali (Bali) — Power: 88
+Element: 🌋 Magma, ⚔️ Force
+Archetype: 🦁 Invincible Warrior / 👑 Forest King
+Lore: Gifted with a boon that allowed him to absorb half the opponent’s power in combat, making him nearly unbeatable. His strength, pride, and fate define a pivotal shift in the balance of the Vanara kingdoms.
+
+🌿 Tara (Queen of Kishkindha) — Power: 63
+Element: 🌿 Nature, 🧠 Strategy
+Archetype: 👑 Wise Queen / 🎓 Diplomatic Advisor
+Lore: Intelligent, perceptive, and diplomatic, Tara’s counsel influenced battles, alliances, and the fate of kingdoms. A symbol of wisdom guiding power.
+
+🧬 Shabari — Power: 48
+Element: 🌿 Nature, ☀️ Devotion
+Archetype: 🧘 Ascetic Devotee / 🌸 Pure Hearted Soul
+Lore: Known for unwavering devotion, waiting years for Rama’s arrival. Her meeting with Rama symbolizes the victory of faith over circumstance.
+
+🕰️ Ahilya — Power: 57
+Element: 🪐 Fate, ☀️ Light (Redemption)
+Archetype: ✨ Redeemed Spirit / 🧘 Silent Witness
+Lore: Once cursed into stone, she regained her form through Rama’s grace. Represents transformation, forgiveness, and renewal.
+
+🌑 Surpanakha — Power: 60
+Element: 🌑 Shadow, 🧪 Emotion
+Archetype: 😈 Catalyst Spirit / 💀 Chaos Harbinger
+Lore: Her encounter with Rama and Lakshmana set off a chain of events leading to war. A character of passion, instability, and unintended destiny.
+
+🎶 Maricha — Power: 64
+Element: 🌬️ Illusion, 🎶 Sound
+Archetype: ✨ Illusionist / 🧙 Cunning Sorcerer
+Lore: A master of deception, whose golden-deer illusion separated Rama from Sita. Bound by fear more than loyalty, he shaped fate through trickery.
+
+🔥 Khara — Power: 72
+Element: 🔥 Wrath, 🌑 Shadow
+Archetype: ⚔️ Demon Commander / 💀 Brutal Enforcer
+Lore: A formidable rakshasa warrior loyal to Ravana. His defeat by Rama alone cemented Rama’s unrivaled martial ability.
+
+🔥 Dushana — Power: 68
+Element: 🔥 Fire, ☠️ Malevolence
+Archetype: 🦴 Savage Lieutenant / ⚔️ Bloodblade Warrior
+Lore: Khara’s loyal second-in-command. Known for ferocity and aggression, but ultimately outmatched by divine strategy and discipline.
+
+🌑 Akshayakumara — Power: 68
+Element: 🌑 Shadow, ⚔️ Inferno-Youth
+Archetype: 👑 Prince Warrior / ⚔️ Reckless Fighter
+Lore: Son of Ravana, brave and bold yet inexperienced. His death at Hanuman’s hands symbolized the unraveling of Lanka’s strength.
+
+🌑 Indrajit (Meghanada) — Power: 89
+Element: 🌑 Shadow, 🎶 Astral Sound, 🪐 Gravity
+Archetype: ✨ Astral Warlock / ⚔️ Demon General
+Lore: Master of celestial weapons and illusionary warfare. Feared across realms, he earned victory over gods and nearly defeated Rama’s army—until destiny intervened.
+
+🌿 Trijata — Power: 58
+Element: 🌿 Nature, ☀️ Compassion
+Archetype: 🧘 Wise Rakshasi / 🌸 Protector Witness
+Lore: A gentle spirit among demons, she comforted Sita in captivity and foresaw Ravana’s downfall in prophetic dreams. Her loyalty was to truth, not blood.
+
+☀️ Sita — Power: 78
+Element: 🌿 Nature, ☀️ Purity
+Archetype: 👑 Dharma Queen / 🧘 Divine Incarnation
+Lore: Born of Earth, embodiment of devotion, virtue, and resilience. Her grace influenced kingdoms, gods, and the very path of destiny.
+
+☀️ Lava — Power: 60
+Element: 🌱 Earth, ☀️ Royal Spirit
+Archetype: 🏹 Young Warrior / 🧬 Heir of Dharma
+Lore: Son of Rama and Sita, raised in humility yet destined for greatness. Skilled in warfare and wisdom, even unknowingly challenged his own lineage.
+
+⚔️ Kusha — Power: 60
+Element: 🌿 Nature, ⚔️ Force
+Archetype: ⚔️ Twin Warrior / 👑 Future Ruler
+Lore: Twin brother of Lava and equally formidable. Represents balance of innocence and strength, prepared to inherit legacy and justice.
+
+🌑 Vibhishana — Power: 61 (Already in Codex #1, skipping entry.)
+
+🌑 Narantaka — Power: 67
+Element: 🌑 Shadow, ⚔️ Wrath
+Archetype: ⚔️ Demon Spear Fighter / 💀 Blood Warrior
+Lore: A fierce son of Ravana known for speed and aggression in battle. Fell during the siege of Lanka to the Vanara forces.
+
+🔥 Devantaka — Power: 66
+Element: 🔥 Fire, ☠️ Fury
+Archetype: 💀 Demon Brawler / ⚔️ Brutal Charger
+Lore: Massive and relentless, he stormed through Rama’s forces with terrifying strength. Ultimately defeated by Hanuman.
+
+🌑 Atikaya — Power: 82
+Element: 🌑 Shadow, 🪙 Armor, 🪐 Celestial Power
+Archetype: 🛡 Iron-Guardian / ⚔️ Titan Knight
+Lore: A prince of Lanka blessed with immunity to mortal weapons. His fall came only when Lakshmana invoked divine celestial arms.
+
+🌬️ Mahaparshva — Power: 63
+Element: 🌬️ Air, ⚔️ Strike Force
+Archetype: ⚔️ War Lieutenant / 💀 Tactical Raider
+Lore: General under Ravana, known for speed and precision. Played key roles in early war phases before being defeated by divine strategy.
+
+🌋 Prahastha — Power: 77
+Element: 🌋 Magma, 🔥 Fire
+Archetype: ⚔️ War General / 🧙 Infernal Strategist
+Lore: Ravana’s chief commander and formidable tactician. A seasoned warrior whose downfall marked a turning point in the war.
+
+🧠 Janaka — Power: 72
+Element: ☀️ Light, 🧠 Wisdom
+Archetype: 👑 Philosopher King / 🧘 Enlightened Sage
+Lore: Father of Sita and ruler of Mithila, revered for spiritual insight and balance. A king who ruled without attachment, embodying perfect dharma.
+
+🎭 Maya (Architect of Illusion) — Power: 85
+Element: 🎶 Illusion, 🌑 Shadow, 🌌 Astral
+Archetype: ✨ Illusion Architect / 🧪 Reality Manipulator
+Lore: A master of mystic engineering and supernatural architecture. Revered and feared for creating impenetrable defenses and astral constructs beyond mortal capability.
+
+🔥 Lavanasura — Power: 76
+Element: 🔥 Rage, 🧪 Corruption
+Archetype: 👹 Demon Lord / ⚔️ Savage Destroyer
+Lore: A powerful rakshasa whose brutality terrorized kingdoms. Only Shatrughna had the destiny and strength to end his tyranny.
+
+🌬️ Sampati — Power: 68
+Element: 🌬️ Wind, ☀️ Sunfire
+Archetype: 🪽 Elder Guardian / 🦅 Sky Witness
+Lore: Brother of Jatayu, once a mighty eagle warrior. Though grounded by fate, he provided critical intelligence that guided Hanuman toward Lanka.
+
+🦅 Garuda (Ramayana Role) — Power: 92
+Element: 🌬️ Air, 🌞 Divine Light
+Archetype: 🪽 Celestial Slayer / 🛡 Serpent Destroyer
+Lore: The divine eagle who rescued Lakshmana from Indrajit’s serpent magic. A symbol of eternal freedom, strength, and devotion.
+
+🌊 Samudra Deva — Power: 83
+Element: 🌊 Water, 🧘 Stillness
+Archetype: 🌊 Ocean King / 🕰 Ancient Witness
+Lore: Embodiment of the vast ocean who acknowledged Rama’s divinity. His cooperation made the crossing to Lanka possible through destiny, not force.
+
+🔥 Maricha’s Lineage (Unnamed Sorcerers) — Power: 50–58
+Element: 🔥 Fire, 🎶 Sound
+Archetype: ✨ Illusion Acolytes / 🧪 Dark Apprentices
+Lore: A lesser-known order of illusionists linked to Maricha’s ancestry. Their fading legacy represents how forgotten magic lingers in the world.
+
+🧬 Shringi Rishi — Power: 66
+Element: 🌱 Earth, 🔥 Ritual Fire
+Archetype: 🧘 Young Ascetic / 🕯 Curse-Bearer
+Lore: A powerful sage whose curse triggered King Parikshit’s destiny. His presence reminds that even youthful conviction can shift cosmic outcomes.
+
+🏹 Krodha Rakshasas — Power: 60 (Collective)
+Element: 🧪 Rage, 🌑 Shadow
+Archetype: 💀 Berserker Horde / ⚔️ Fury-Driven Warriors
+Lore: A legion of emotion-driven demons in Lanka’s defense. Their strength peaked at chaos, but discipline and divine will overwhelmed them.
+
+🌬️ Sarabha (Ramayana Variant) — Power: 73
+Element: 🌬️ Wind, 🦁 Primal Force
+Archetype: ⚔️ Wild Predator / 💨 Mountain Stalker
+Lore: A mythical beast used in ancient retellings as a symbol of unrestrained ferocity. Rarely seen, but impossible to ignore when present.
+
+☀️ Yudhishthira — Power: 68
+Element: ☀️ Light, 🧬 Dharma
+Archetype: 👑 Dharma King / 🧘 Spiritual Leader
+Lore: Eldest of the Pandavas and embodiment of righteousness. His strength lies not in aggression but in truth, restraint, and unwavering moral conviction.
+
+🌿 Nakula — Power: 58
+Element: 🌿 Nature, 🌱 Balance
+Archetype: 🗡 Elegant Swordsman / 🌸 Graceful Warrior
+Lore: Known for unmatched beauty, calmness, and swordsmanship. Skilled in horse mastery and battlefield discipline, representing harmony in combat.
+
+🌙 Sahadeva — Power: 59
+Element: 🧠 Mind, 🕰 Fate
+Archetype: 🔮 Prophetic Strategist / 🧘 Silent Scholar
+Lore: A master astrologer with deep foresight, yet bound by destiny’s silence. His strength was wisdom and subtle influence rather than brute force.
+
+💞 Subhadra — Power: 44
+Element: 💧 Grace, ☀️ Spirit
+Archetype: 👑 Noble Princess / 🌸 Devoted Mother
+Lore: Beloved sister of Krishna and wife of Arjuna. Gentleness and political balance flowed through her presence, shaping alliances and legacy.
+
+🌱 Uttara (Prince of Matsya) — Power: 52
+Element: 🌱 Earth, 🎯 Youthful Ambition
+Archetype: 🎯 Young Archer / 🧪 Inexperienced Warrior
+Lore: Trained by Arjuna in disguise, he grew from fear to courage. A symbol of raw potential shaped by destiny and mentorship.
+
+🌱 Vrishaketu — Power: 55
+Element: 🔥 Will, 🌱 Renewal
+Archetype: ⚔️ Redemption Warrior / 🧬 Heir of Karna
+Lore: The only surviving son of Karna. Forgiven by the Pandavas and trained to become a hero, representing reconciliation and rebirth after war.
+
+🕰️ Parikshit — Power: 62
+Element: 🕰 Fate, 🧬 Dynasty
+Archetype: 👑 Successor King / 🧘 Test of Time
+Lore: Grandson of Arjuna, ruler after the war’s ashes settled. His life and curse marked the transition into the age of Kali, shaping generational karma.
+
+🔥 Duryodhana — Power: 72
+Element: 🌋 Magma, 🧪 Ambition
+Archetype: ⚔️ Mace Champion / 👑 Defiant Ruler
+Lore: Proud, talented, and fiercely loyal to his kin — yet blinded by rivalry. His fall was not due to weakness but repeating a destiny written by ego.
+
+🌑 Dushasana — Power: 60
+Element: 🌑 Shadow, 🧪 Cruelty
+Archetype: 💀 Enforcer Warrior / ⚔️ Ruthless Lieutenant
+Lore: Brother and loyal second to Duryodhana. His role in Draupadi’s humiliation sealed his fate and transformed the war from conflict to inevitability.
+
+🧠 Shakuni — Power: 65
+Element: 🌑 Shadow, 🧠 Manipulation
+Archetype: 🎭 Master Strategist / 🧪 Gamebreaker
+Lore: A cunning mastermind whose mastery of diplomacy, deception, and psychological warfare shaped the very narrative of the Mahabharata.
+
+🌑 Dhritarashtra — Power: 63
+Element: 🌑 Shadow, 🧠 Inner Vision
+Archetype: 👑 Blind Monarch / 🕰 Tragic Ruler
+Lore: A king bound by love, fear, and fate rather than leadership. His inability to restrain his sons shaped the path toward inevitable conflict.
+
+💧 Gandhari — Power: 70
+Element: 💧 Devotion, 🪐 Fate
+Archetype: 👑 Ascetic Queen / 🧿 Curse Bearer
+Lore: Voluntarily blinded herself to share her husband’s world. Her final curse echoed through time, shaping the end of dynasties.
+
+💎 Vidura — Power: 66
+Element: 🧠 Mind, ☀️ Wisdom
+Archetype: 🧘 Dharma Advisor / 🎓 Voice of Truth
+Lore: The embodiment of justice and reason. Though not a warrior, his guidance, restraint, and insight made him one of the most respected figures in the epic.
+
+🕊️ Sanjaya — Power: 64
+Element: 🌌 Astral Sight, 🧠 Mind
+Archetype: 🔮 Divine Witness / 📜 Chronicle Keeper
+Lore: Gifted with celestial vision by Vyasa to narrate the Kurukshetra War. Saw the battlefield with clarity beyond time, distance, and perception.
+
+🧪 Vikarna — Power: 58
+Element: ☀️ Justice, 🌑 Shadow
+Archetype: ⚔️ Contradiction Knight / 🧬 Moral Dissenter
+Lore: A rare Kaurava who questioned injustice during Draupadi’s humiliation. His moral struggle made him tragically noble among darkness.
+
+⚖️ Kripacharya — Power: 68
+Element: 🧬 Spirit, 🎯 Precision
+Archetype: 🧘 Immortal Sage-Warrior / 🎓 Battlefield Instructor
+Lore: One of the few survivors after the war. His skill, discipline, and immortality granted him a role in guiding future generations.
+
+⚔️ Shikhandi — Power: 63
+Element: 🌬️ Wind, 🧪 Fate
+Archetype: ⚔️ Vengeance Warrior / 🌑 Reborn Soul
+Lore: A reincarnation of Amba, destined to end Bhishma’s invincibility. Their presence brought karma full circle through identity, persistence, and destiny.
+
+🦁 Satyaki — Power: 69
+Element: ⚡ Lightning, 🏹 Precision
+Archetype: 🎯 Archer Hero / ⚔️ Loyal Champion
+Lore: A fierce Yadava warrior and student of Arjuna. His loyalty to Krishna and the Pandavas made him a pivotal force on the battlefield.
+
+🎯 Jayadratha — Power: 66
+Element: 🌑 Shadow, 🪐 Gravity
+Archetype: 🧙 Barrier Warden / ⚔️ Fated Opponent
+Lore: Granted a boon to halt the Pandavas for a day — leading to Arjuna’s greatest personal loss. His death fulfilled a vow sealed in blood and fire.
+
+🧬 Kritavarma — Power: 65
+Element: 🌑 Shadow, 🧠 Strategy
+Archetype: 🦊 Stealth General / ⚔️ Nightblade Warrior
+Lore: A Yadava commander with cold precision in battle strategy. Played significant roles in both war effort and aftermath.
+
+🏹 Ekalavya — Power: 72
+Element: 🌱 Earth, 🎯 Precision
+Archetype: 🎯 Self-Taught Archer / 🧘 Devotion Disciple
+Lore: A warrior of extraordinary dedication who mastered archery without a guru — offering even his thumb as obedience. His skill grew not from privilege, but from relentless will.
+
+🔥 Barbarika (Khatu Shyam) — Power: 95
+Element: ⚡ Lightning, 🌑 Shadow, ☀️ Divine Favor
+Archetype: 🔮 Battle-Ender / ⚔️ Unstoppable Champion
+Lore: Possessor of three invincible arrows capable of ending the war in moments. Krishna intervened because his power would erase strategy, destiny, and dharma itself.
+
+🌑 Vyasa — Power: 88
+Element: 🧠 Mind, 🌌 Cosmic Insight
+Archetype: 🧘 Sage of Eternity / 📜 Epic Architect
+Lore: The composer of the Mahabharata and a sage with unimaginable spiritual vision. His wisdom shaped time, tradition, and generations.
+
+☀️ Satyavati — Power: 69
+Element: 🌊 Water, ☀️ Sovereignty
+Archetype: 👑 Matriarch Queen / 🧬 Destiny Shaper
+Lore: Born of the river yet destined for the throne. Through her, dynasties rose, kings were born, and the chain of events leading to the war began.
+
+🔥 Amba — Power: 73
+Element: 🌑 Shadow, 🔥 Vengeance
+Archetype: 💀 Spirit of Retribution / 🧬 Reborn Warrior
+Lore: Wronged by fate and honor, she vowed to destroy Bhishma — even if death was required. Returned as Shikhandi to fulfill the vow written in pain.
+
+🌿 Hidimba — Power: 70
+Element: 🌿 Nature, 🌑 Wild Shadow
+Archetype: 🐺 Forest Huntress / 💀 Mystic Predator
+Lore: A rakshasi who fell in love with Bhima and bore Ghatotkacha. Both fierce and compassionate, she represents primal loyalty and ancient wilderness magic.
+
+✨ Ahilya (Mahabharata context) — Power: 57
+Element: ☀️ Light, 🧬 Redemption
+Archetype: 🧘 Silent Sufferer / 🌸 Renewed Soul
+Lore: One whose curse and liberation echo across texts. Represents the transformational power of grace, forgiveness, and spiritual awakening.
+
+🌿 Devayani — Power: 64
+Element: 🌿 Nature, 🧠 Diplomacy
+Archetype: 🧬 Bloodline Catalyst / 💞 Political Figure
+Lore: Daughter of Shukracharya, linked to lineages that influenced the Mahabharata’s bloodlines. Her choices shaped future kingdoms in subtle but undeniable ways.
+
+🦊 Susharma — Power: 61
+Element: 🧪 Aggression, ⚔️ Conflict
+Archetype: ⚔️ Rival King / 🎯 Persistent Challenger
+Lore: A royal adversary whose repeated confrontations with Arjuna and the Pandavas added complexity and danger to wartime strategy.
+
+⚔️ Somadatta — Power: 65
+Element: 🪐 Resolve, 🧪 Discipline
+Archetype: 🛡 Veteran Warrior / 🧘 Calm Strategist
+Lore: A seasoned fighter who maintained composure even in chaos. His lineage and leadership made him both respected and feared.
+
+🔥 Bhagadatta — Power: 74
+Element: 🌋 Magma, 🧪 Battle Rage
+Archetype: 🐘 Elephant Commander / ⚔️ Veteran King
+Lore: Allied with the Kauravas, known for mastery in elephant warfare and divine astras. His combat experience spanned generations before Kurukshetra.
+
+⚡ Srutayudha — Power: 63
+Element: ⚡ Lightning, 🪙 Weapon Blessing
+Archetype: ⚔️ Royal Warrior / 💀 Cursed Bearer
+Lore: Gifted a divine mace with a deadly catch — it could never strike the innocent. His downfall came when destiny and righteousness intersected.
+
+🌿 Bahlika — Power: 68
+Element: 🌿 Age, 🧬 Lineage
+Archetype: 🛡 Ancient Prince / ⚔️ Eldest Warrior
+Lore: One of the oldest fighters on the battlefield, embodying forgotten strength and duty. His loyalty to family overshadowed greater morality.
+
+🧿 Shalya — Power: 73
+Element: 🪐 Gravity, 🧠 Manipulation
+Archetype: 🦊 Sarcastic Strategist / ⚔️ Charioteer King
+Lore: A skilled warrior forced into service under Karna. His strategic taunts and insight made him both powerful and psychologically lethal.
+
+🌑 Jayatsena — Power: 60
+Element: 🌑 Slight Shadow, ⚔️ Raid Strength
+Archetype: ⚔️ Field Warrior / 💥 Disruptive Commander
+Lore: Known more for aggression than strategy. His presence added force but not wisdom to the Kaurava campaign.
+
+⚓ Rukmaratha — Power: 57
+Element: 🪙 Alloy, ⚔️ Iron Will
+Archetype: 🛡 Defensive Fighter / 🌑 Loyal Officer
+Lore: A dependable but ultimately outmatched Kaurava ally. His strength came from persistence rather than talent.
+
+🧘 Saindhava (Sindhu King) — Power: 67
+Element: 💧 Water, 🪐 Cold Resolve
+Archetype: ⚔️ Territorial Defender / 🌊 Ocean-Born Warrior
+Lore: Known for steadiness and discipline. His resistance against the Pandavas added depth and tension to alliances and war politics.
+
+💉 Chitrasena — Power: 62
+Element: 🌬️ Wind, 🎶 Precision
+Archetype: 🎯 Tactical Archer / ✨ Celestial Ally
+Lore: A Gandharva prince who humbled Arjuna early in story and later taught him music, grace, and restraint — shaping his evolution.
+
+🧠 Kichaka — Power: 71
+Element: 🧪 Corruption, 🌋 Pride
+Archetype: ⚔️ Tyrant Warrior / 💀 Abuser of Power
+Lore: A powerful commander under King Virata, eventually slain by Bhima disguised as a woman. His fate marked justice correcting arrogance.
+
+🌑 Ashwin Twins (Nasatya & Dasra) — Power: 80 (combined)
+Element: 🌑 Moonlight, 🌿 Healing, 💧 Renewal
+Archetype: ✨ Divine Physicians / 🪽 Twin Devas
+Lore: Renowned healers appearing across both epics. Their presence symbolizes rejuvenation, balance, and the subtle interplay of science and divinity.
+
+🧬 Ambika — Power: 50
+Element: 🌑 Shadow, 💧 Emotion
+Archetype: 👑 Silent Matriarch / 🕯 Duty-Bound Queen
+Lore: Mother of Dhritarashtra, her life was shaped by obligations rather than ambition. Her legacy lived through the lineage she carried rather than the voice she spoke.
+
+🌿 Ambalika — Power: 50
+Element: 🌿 Nature, 🌬️ Breath
+Archetype: 👑 Reserved Queen / 🌸 Graceful Ancestral Link
+Lore: Mother of Pandu, her reaction during Vyasa’s conception ritual shaped the future king’s fragility and fate. A symbol of quiet influence.
+
+🔥 Pandu — Power: 66
+Element: 🔥 Karma, ☀️ Responsibility
+Archetype: 👑 Tragic King / 🧘 Warrior-Scholar
+Lore: A noble ruler cursed to never touch the woman he loved. His restraint and his decisions influenced destinies of kingdoms and generations.
+
+💧 Matsya King Virata — Power: 62
+Element: 💧 Court Influence, 🌱 Stability
+Archetype: 🛡 Shelter Ruler / 👑 Host of Destiny
+Lore: The king who unknowingly sheltered the Pandavas during their exile. His court became the turning point between hiding and war.
+
+⚔️ Uttara Kumara — Power: 55
+Element: 🎯 Youthful Ambition, 🔥 Courage
+Archetype: ⚔️ Apprentice Warrior / 🧪 Unrefined Potential
+Lore: Once afraid, later forged into bravery under Arjuna’s guidance. A symbol of growth in the shadow of great heroes.
+
+✨ Shrutakarma — Power: 48
+Element: 🌬️ Innocence, 💧 Dharma
+Archetype: 🧬 Child of Legacy / 🌸 Quiet Fate Bearer
+Lore: Son of Arjuna and Draupadi, representing continuation of lineage beyond war. His importance is symbolic, not destructive.
+
+🦁 Ghatotkacha (already included in Codex #1 — skipped here)
+
+⚔️ Vrishasena — Power: 69
+Element: 🔥 Willpower, 🪙 Armor
+Archetype: ⚔️ Heir Warrior / 🎯 Focused Combatant
+Lore: Fierce son of Karna who fought bravely and skillfully. His fall further fueled the emotional turning points of the war.
+
+🔥 Somadatta’s Line (Bhurishrava) — Power: 71
+Element: 🪙 Steel, 🧠 Strategy
+Archetype: ⚔️ Venerable Duelist / 🛡 Honor-Bound Warrior
+Lore: A respected fighter of noble conduct whose final moments reflected the tragic moral fractures within the war.
+
+🧿 Parasharya Line (from Vyasa) — Power: 76
+Element: 🌌 Cosmic Spark, 🕰 Destiny
+Archetype: 🧘 Ancient Bloodline / 🔮 Fate Carrier
+Lore: This lineage bridges divine, mortal, and epic threads. From this thread flows scripture, kingship, suffering, and enlightenment.
+
+ Draupadi  Power: 35
+Element:  Nature,  Light
+Archetype:  Destiny-Bound Queen /  Resilient Spirit
+Lore: Born from sacred fire rather than a womb, Draupadi carries divine purpose tied to karma, justice, and transformation. Her presence influences fate, alliances, and moral consequence. Though not a combatant, her spiritual force impacts kingdoms, dharma, and cosmic justice.
